@@ -99,7 +99,7 @@ textarea {
   left: 2%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   body {
     background: var(--primary-color);
   }
@@ -108,6 +108,9 @@ textarea {
   }
   .container {
     width: 100%;
+  }
+  .footer-paragraph {
+    display: none;
   }
 }
 </style>

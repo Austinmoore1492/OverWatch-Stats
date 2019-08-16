@@ -14,47 +14,39 @@
         <img :src="profileData.platformInfo.avatarUrl" alt class="platform-avatar" />
         {{profileData.platformInfo.platformUserId}}
       </h1>
-        <div>
-          <ul class="grid">
-            <li v-if="profileData.segments[0].stats.damageDone">
-              <h4>Damage Done (Casual)</h4>
-              <p>
-                {{profileData.segments[0].stats.damageDone.displayValue}}
-              </p>
-            </li>
-            <li v-if="profileData.segments[1].stats.damageDone">
-              <h4>Damage Done (Competitive)</h4>
-              <p>
-                {{profileData.segments[1].stats.damageDone.displayValue}}
-              </p>
-            </li>
-            <li v-if="profileData.segments[0].stats.goldMedals">
-              <h4>Gold Medals (Casual)</h4>
-              <p>
-                {{profileData.segments[0].stats.goldMedals.displayValue}}
-              </p>
-            </li>
-             <li v-if="profileData.segments[1].stats.goldMedals">
-              <h4>Gold Medals (Competitive)</h4>
-              <p>
-                {{profileData.segments[1].stats.goldMedals.displayValue}}
-              </p>
-            </li>
-            <li v-if="profileData.segments[0].stats.kills">
-              <h4>Lifetime Kills</h4>
-              <p>
-                {{profileData.segments[0].stats.wlPercentage}}
-                <span>({{profileData.segments[0].stats.wlPercentage.displayValue}}%)</span>
-              </p>
-            </li>
-            <li v-if="profileData.segments[0].stats.damage">
-              <h4>Damage Done</h4>
-              <p>
-                {{profileData.segments[0].stats.damage.displayValue}}
-                <span>({{profileData.segments[0].stats.damage.percentile}}%)</span>
-              </p>
-            </li>
-          </ul>
+      <div>
+        <ul class="grid">
+          <li v-if="profileData.segments[0].stats.damageDone">
+            <h4>Damage Done (QP/Arcade)</h4>
+            <p>{{profileData.segments[0].stats.damageDone.displayValue}}</p>
+          </li>
+          <li v-if="profileData.segments[1].stats.damageDone">
+            <h4>Damage Done (Competitive)</h4>
+            <p>{{profileData.segments[1].stats.damageDone.displayValue}}</p>
+          </li>
+          <li v-if="profileData.segments[0].stats.goldMedals">
+            <h4>Gold Medals (QP/Arcade)</h4>
+            <p>{{profileData.segments[0].stats.goldMedals.displayValue}}</p>
+          </li>
+          <li v-if="profileData.segments[1].stats.goldMedals">
+            <h4>Gold Medals (Competitive)</h4>
+            <p>{{profileData.segments[1].stats.goldMedals.displayValue}}</p>
+          </li>
+          <li v-if="profileData.segments[0].stats.kills">
+            <h4>Lifetime Kills</h4>
+            <p>
+              {{profileData.segments[0].stats.wlPercentage}}
+              <span>({{profileData.segments[0].stats.wlPercentage.displayValue}}%)</span>
+            </p>
+          </li>
+          <li v-if="profileData.segments[0].stats.damage">
+            <h4>Damage Done</h4>
+            <p>
+              {{profileData.segments[0].stats.damage.displayValue}}
+              <span>({{profileData.segments[0].stats.damage.percentile}}%)</span>
+            </p>
+          </li>
+        </ul>
       </div>
       <router-link to="/">Go Back</router-link>
     </div>
@@ -83,7 +75,6 @@ export default {
       );
 
       this.profileData = res.data.data;
-      console.log(this.profileData);
       this.loading = false;
     } catch (err) {
       this.loading = false;
