@@ -1,4 +1,4 @@
-# Apex Legends Stat Tracker
+# OverWatch Stats Tracker
 
 > Full stack Vue/Express app using the Tracker Network API to track player stats
 
