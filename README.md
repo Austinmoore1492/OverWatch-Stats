@@ -1,7 +1,8 @@
 # OverWatch Stats Tracker
 
 > Full stack Vue/Express app using the Tracker Network API to track player stats
-[Go Here To Check It Out](https://secure-wave-18318.herokuapp.com/)
+
+> [Go Here To Check It Out](https://secure-wave-18318.herokuapp.com/)
 
 ## Quick Start
 
