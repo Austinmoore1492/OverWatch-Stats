@@ -47,8 +47,9 @@ export default {
           icon: "exclamation-circle"
         });
       } else {
-        console.log(this.gamertag);
-        this.$router.push(`/profile/${this.platform}/${this.gamertag}`);
+        this.$router.push(
+          `/profile/${this.platform}/${encodeURIComponent(this.gamertag)}`
+        );
       }
     }
   }

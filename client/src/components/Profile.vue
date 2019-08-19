@@ -10,10 +10,7 @@
     </div>
 
     <div v-if="profileData" class="container">
-      <h1 class="gamertag">
-        <img :src="profileData.platformInfo.avatarUrl" alt class="platform-avatar" />
-        {{profileData.platformInfo.platformUserId}}
-      </h1>
+      <h1 class="gamertag">{{profileData.platformInfo.platformUserId}}</h1>
       <div>
         <ul class="grid">
           <li v-if="profileData.segments[0].stats.damageDone">
@@ -71,7 +68,9 @@ export default {
     this.loading = true;
     try {
       const res = await axios.get(
-        `/api/v1/profile/${this.$route.params.platform}/${this.$route.params.gamertag}`
+        `/api/v1/profile/${this.$route.params.platform}/${encodeURIComponent(
+          this.$route.params.gamertag
+        )}`
       );
 
       this.profileData = res.data.data;
