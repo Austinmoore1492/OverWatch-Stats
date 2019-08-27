@@ -33,7 +33,7 @@ export default {
 body {
   background: var(--primary-color);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  color: #fff;
+  color: #f0f0f0;
   line-height: 1.6;
 }
 
@@ -66,7 +66,7 @@ ul {
   margin: 1rem 0;
 }
 .search {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   border: 4px #fff solid;
   margin-top: 1rem;
   padding: 2rem;
@@ -83,13 +83,15 @@ textarea {
 }
 
 .btn {
-  display: inline-block;
   background: var(--primary-color);
   color: #fff;
   padding: 0.4rem 1.3rem;
   border: none;
+  border-radius: 4px;
+  max-width: 50%;
   cursor: pointer;
   outline: none;
+  margin: auto;
   margin-top: 1rem;
 }
 

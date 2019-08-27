@@ -116,11 +116,6 @@ a:hover {
   color: #ccc;
 }
 
-.platform-avatar {
-  width: 40px;
-  margin-right: 0.7rem;
-}
-
 img {
   width: 100%;
 }
@@ -157,11 +152,6 @@ li span {
     display: block;
     text-align: center;
   }
-
-  .platform-avatar {
-    display: none;
-  }
-
   .grid {
     grid-template-columns: 1fr;
   }
