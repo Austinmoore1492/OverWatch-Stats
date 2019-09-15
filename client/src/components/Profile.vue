@@ -152,6 +152,9 @@ li span {
     display: block;
     text-align: center;
   }
+  h1.gamertag {
+    font-size: 1.5rem;
+  }
   .grid {
     grid-template-columns: 1fr;
   }
