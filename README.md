@@ -2,7 +2,7 @@
 
 > Full stack Vue/Express app using the Tracker Network API to track player stats
 
-> [Go Here To Check It Out](https://secure-wave-18318.herokuapp.com/)(Down For Maintenance)
+> [Go Here To Check It Out](https://overwatch-stats-tracker.herokuapp.com/)
 
 ## Quick Start
 
